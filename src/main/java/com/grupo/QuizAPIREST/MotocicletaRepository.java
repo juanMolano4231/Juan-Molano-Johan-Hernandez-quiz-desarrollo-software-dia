@@ -57,4 +57,15 @@ public class MotocicletaRepository {
     public void delete(Motocicleta m) {
         motocicletas.remove(m);
     }
+    
+    public List<Motocicleta> buscarPorFiltros(int cilindraje) {
+        List<Motocicleta> mArr = new ArrayList<>();
+        for (Motocicleta m : motocicletas) {
+            if (m.getCilindrajeMotocicleta() == cilindraje) {
+                mArr.add(m);
+            }
+        }
+        return mArr;
+    }
+    
 }

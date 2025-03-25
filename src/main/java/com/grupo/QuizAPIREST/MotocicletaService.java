@@ -54,4 +54,8 @@ public class MotocicletaService {
         repository.delete(m);
     }
     
+    public List<Motocicleta> buscarPorFiltros(int cilindraje) {
+        return repository.buscarPorFiltros(cilindraje);
+    }
+    
 }
