@@ -38,4 +38,12 @@ public class MotocicletaService {
         return repository.getAllMotocicletas();
     }
     
+    public Motocicleta findById(String id) {
+        return repository.findById(id);
+    }
+    
+    public Motocicleta update(Motocicleta m) {
+        return repository.update(m);
+    }
+    
 }
