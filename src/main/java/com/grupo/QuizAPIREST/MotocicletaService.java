@@ -46,4 +46,8 @@ public class MotocicletaService {
         return repository.update(m);
     }
     
+    public void delete(Motocicleta m) {
+        repository.delete(m);
+    }
+    
 }
