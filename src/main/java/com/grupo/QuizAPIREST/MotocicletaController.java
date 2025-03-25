@@ -78,4 +78,10 @@ public class MotocicletaController {
         return new ResponseEntity<>(motocicleta, HttpStatus.OK);
     }
 
+    @GetMapping("/filtrar")
+    public ResponseEntity<List<Motocicleta>> buscarMotocicletas(@RequestParam(required = false) int cilindraje) {
+        List<Motocicleta> motocicletas = service.buscarPorFiltros(cilindraje);
+        return new ResponseEntity<>(motocicletas, HttpStatus.OK);
+    }
+
 }
