@@ -46,9 +46,10 @@ public class MotocicletaRepository {
     }
     
     public Motocicleta update(Motocicleta motocicleta) {
-        for (Motocicleta m : motocicletas) {
+        for (int i = 0; i < motocicletas.size(); i++) {
+            Motocicleta m = motocicletas.get(i);
             if (m.getId().equals(motocicleta.getId())) {
-                m = motocicleta;
+                motocicletas.set(i, motocicleta);
             }
         }
         return null;
