@@ -29,6 +29,8 @@ public class Motocicleta {
         this.cilindrajeMotocicleta = cilindrajeMotocicleta;
         this.precioMotocicleta = precioMotocicleta;
         this.colorMotocicleta = colorMotocicleta;
+        this.id = UUID.randomUUID().toString();
+
     }
 
     public String getId() {
