@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.group</groupId>
-	<artifactId>gestion-cine</artifactId>
+	<artifactId>QuizAPIREST</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Proyecto-Desarrollo-Software</name>
-	<description>Proyecto aplicación de gestión de cine</description>
+	<name>QuizAPIREST</name>
+	<description>Quiz de APIREST</description>
 	<url/>
 	<licenses>
 		<license/>
