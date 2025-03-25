@@ -26,4 +26,14 @@ public class MotocicletaRepository {
         motocicletas.add(m);
         return m;
     }
+    
+    public Motocicleta buscarPorPlaca(String placa) {
+        for (Motocicleta m : motocicletas) {
+            if (placa.equals(m.getPlacaMotocicleta())) {
+                return m;
+            }
+        }
+        return null;
+    }
+    
 }
