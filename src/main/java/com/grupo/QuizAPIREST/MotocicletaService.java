@@ -38,6 +38,10 @@ public class MotocicletaService {
         return repository.getAllMotocicletas();
     }
     
+    public Motocicleta buscarPorPlaca(String placa) {
+        return repository.buscarPorPlaca(placa);
+    }
+  
     public Motocicleta findById(String id) {
         return repository.findById(id);
     }

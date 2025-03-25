@@ -22,17 +22,17 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author Juan José Molano
  */
-
 @RestController
 @RequestMapping("/api/motocicletas")
 public class MotocicletaController {
+
     private final MotocicletaService service;
-    
+
     @Autowired
     public MotocicletaController(MotocicletaService service) {
         this.service = service;
     }
-    
+
     @GetMapping
     public ResponseEntity<List<Motocicleta>> getAllMotocicletas() {
         List<Motocicleta> motocicletas = service.getAllMotocicletas();
@@ -53,9 +53,16 @@ public class MotocicletaController {
     }
   
     @PostMapping
-    public ResponseEntity<Motocicleta> createMotocicleta (@RequestBody Motocicleta motocicleta) {
+    public ResponseEntity<Motocicleta> createMotocicleta(@RequestBody Motocicleta motocicleta) {
         Motocicleta newMotocicleta = service.save(motocicleta);
         return new ResponseEntity<>(newMotocicleta, HttpStatus.CREATED);
 
     }
+
+    @GetMapping("/buscar")
+    public ResponseEntity<Motocicleta> buscarPorPlaca(@RequestParam String placa) {
+        Motocicleta motocicleta = service.buscarPorPlaca(placa);
+        return new ResponseEntity<>(motocicleta, HttpStatus.OK);
+    }
+
 }
