@@ -53,4 +53,8 @@ public class MotocicletaRepository {
         }
         return null;
     }
+    
+    public void delete(Motocicleta m) {
+        motocicletas.remove(m);
+    }
 }
