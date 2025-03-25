@@ -61,7 +61,7 @@ public class MotocicletaController {
     }
     
     @DeleteMapping("/{id}")
-	  public ResponseEntity<Void> deleteUsuario(@PathVariable String id) {
+	  public ResponseEntity<Void> deleteMotocicleta(@PathVariable String id) {
 		Motocicleta mExistente = service.findById(id);
 		if (mExistente != null) {
 			service.delete(mExistente);
